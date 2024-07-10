@@ -4,7 +4,7 @@ async function getData() {
     const hash = window.location.hash;
     const queryString = window.location.search;
   
-    let isIndexPage = pathname === "/weapon.html" || pathname === "weapon.html";
+    let isIndexPage = pathname === "/vlr/weapon.html" || pathname === "weapon.html";
   
     if (isIndexPage || queryString !== "" || hash !== "") {
       const menuUrl = "https://valorant-api.com/v1/weapons";
