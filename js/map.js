@@ -4,7 +4,7 @@ async function getData() {
   const hash = window.location.hash;
   const queryString = window.location.search;
 
-  let isIndexPage = pathname === "/map.html" || pathname === "map.html";
+  let isIndexPage = pathname === "/vlr/map.html" || pathname === "map.html";
 
   if (isIndexPage || queryString !== "" || hash !== "") {
     const menuUrl = "https://valorant-api.com/v1/maps";
