@@ -77,4 +77,4 @@ async function searchMap() {
 
 document.addEventListener("DOMContentLoaded", getData);
 
-document.getElementById("search-input").addEventListener("input", searchWeapon);
+document.getElementById("search-input").addEventListener("input", searchMap);
