@@ -7,7 +7,7 @@ async function getData() {
   let isIndexPage = pathname === "/vlr/map.html" || pathname === "map.html";
 
   if (isIndexPage || queryString !== "" || hash !== "") {
-    const menuUrl = "https://cors-anywhere.herokuapp.com/https://valorant-api.com/v1/maps";
+    const menuUrl = "https://valorant-api.com/v1/maps";
     try {
       const response = await fetch(menuUrl);
       if (!response.ok) {
