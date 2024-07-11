@@ -1,0 +1,109 @@
+header {
+  position: relative;
+  background-color: black;
+  height: 75vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+header .bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+main {
+  flex: 1;
+}
+footer {
+  background-color: #1a2130;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  position: relative;
+  bottom: 0;
+}
+/* Media Query for devices with coarse pointers and no hover functionality */
+/* General mobile styles */
+@media (max-width: 1440px) {
+  header {
+    height: 50vh; /* Adjust height for mobile screens */
+    min-height: 20rem; /* Adjust minimum height for mobile screens */
+  }
+
+  header .overlay {
+    opacity: 0.7; /* Increase overlay opacity for better readability on mobile */
+  }
+
+  header .container {
+    padding: 0.8rem; /* Add padding for content inside the container */
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .btn-danger, .btn-light {
+    font-size: 0.7rem; /* Adjust font size for better readability */
+    padding: 0.5rem 1rem; /* Adjust padding for better touch target */
+    border-radius: 5px; /* Adjust border radius for a more touch-friendly shape */
+  }
+  .raze {
+    display: none;
+  }
+  .valorant {
+    height: 50%;
+    width: 50%;
+  }
+}
+
+/* Ensure background video plays on mobile */
+@media (pointer: coarse) and (hover: none) {
+  header {
+    height: 50vh; /* Adjust height for mobile screens */
+    min-height: 20rem; /* Adjust minimum height for mobile screens */
+    background: none; /* Remove fallback image */
+  }
+
+  header video {
+    display: block; /* Ensure video is displayed */
+  }
+}

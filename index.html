@@ -11,20 +11,7 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-    <style>
-      body {
-        background-color: #2f3645;
-      }
-      footer {
-        background-color: #1a2130;
-        color: white;
-        text-align: center;
-        padding: 1rem 0;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <nav
@@ -34,8 +21,8 @@
     >
       <div class="container">
         <a href="index.html" class="text-decoration-none">
-            <img src="img/riot.svg" width="70" height="70" alt="" class="me-3" />
-            <img src="img/icon.svg" width="40" height="40" alt="" class="me-3" />
+          <img src="img/riot.svg" width="70" height="70" alt="" class="me-3" />
+          <img src="img/icon.svg" width="40" height="40" alt="" class="me-3" />
         </a>
         <button
           class="navbar-toggler"
@@ -86,11 +73,117 @@
         </div>
       </div>
     </nav>
-    <div class="container"></div>
+    <header>
+      <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
+      <div class="overlay"></div>
+
+      <!-- The HTML5 video element that will create the background video on the header -->
+      <video
+        playsinline="playsinline"
+        autoplay="autoplay"
+        muted="muted"
+        loop="loop"
+      >
+        <source
+          src="https://cmsassets.rgpub.io/sanity/files/dsfx7636/news/409ab2fc369ba5e1fe50bac10c6676d7d1365a9f.mp4"
+          type="video/mp4"
+        />
+      </video>
+
+      <!-- The header content -->
+      <div class="container h-100">
+        <div class="d-flex h-100 text-center align-items-center">
+          <div class="w-100 text-white">
+            <p>5v5 character-based tactical shooter game</p>
+            <img
+              src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/7b76209193f1bfe190d3ae6ef8728328870be9c3-736x138.png?auto=format&fit=fill&q=80&w=368"
+              alt="Valorant"
+              class="me-3 valorant"
+            />
+            <br />
+            <br />
+            <a
+              href="https://valorant.secure.dyn.riotcdn.net/channels/public/x/installer/current/live.live.ap.exe"
+              class="btn btn-danger border"
+              >DOWNLOAD</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="my-5 d-flex justify-content-center align-items-center">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12 col-md-6 text-center text-md-start">
+              <h1 class="display-3 font-weight-bold"><strong>WE ARE VALORANT</strong></h1>
+              <h5 class="border-bottom pb-3">LIMIT CHALLENGE</h5>
+              <p>
+                Combine your style and experience on the global competitive
+                stage. You have 13 rounds to attack and defend your side with
+                fierce gunplay and tactical skills. With one life per round, you
+                must think faster than your opponents if you want to stay alive.
+                Take out enemies in both Competitive and Unranked modes as well
+                as Deathmatch and Spike Rush.
+              </p>
+            </div>
+            <div class="col-12 col-md-6 text-center">
+              <video
+                playsinline="playsinline"
+                autoplay="autoplay"
+                muted="muted"
+                loop="loop"
+                class="w-100"
+              >
+                <source
+                  src="https://cmsassets.rgpub.io/sanity/files/dsfx7636/news/f6ccf20dfe3f6a24ea9216bb8afaaa66740c715d.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+          </div>
+        </div>
+      </section>
+      <header>
+        <section class="my-5 d-flex justify-content-center align-items-center">
+          <!-- The HTML5 video element that will create the background video on the header -->
+          <img src="img/bg.jpg" alt="" class="bg" />
+
+          <!-- The header content -->
+          <div class="container">
+            <div class="row align-items-center text-white">
+              <div class="col-12 col-md-6 text-center text-md-start">
+                <h1 class="display-3 font-weight-bold"><strong>AGENT</strong></h1>
+                <h5 class="border-bottom pb-3">
+                  CREATIVITY IS YOUR BEST WEAPON
+                </h5>
+                <p>
+                  More than just guns and bullets, you will choose Agents armed
+                  with adaptive, agile, and deadly abilities to prove your
+                  marksmanship. In line with the differences in marksmanship, so
+                  too here; no two Agents will have the same characteristics.
+                </p>
+                <a
+                  href="agent.html"
+                  class="btn btn-light border"
+                  >VIEW ALL AGENT</a
+                >
+              </div>
+              <div class="col-12 col-md-6 text-center">
+                <img
+                  src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/1d62a3751be9d7abfce84da8ca89be7d79f07fed-1232x1232.png?auto=format&fit=fill&q=80&w=728" class="raze"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </header>
+    </main>
     <footer
       class="d-flex flex-wrap py-3 border-top text-white justify-content-center"
     >
-      <div class="d-flex align-items-center">
+      <div class="footer-content">
         <a
           href="/"
           class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1"
