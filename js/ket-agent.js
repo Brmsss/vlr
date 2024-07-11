@@ -4,7 +4,8 @@ function displayAgentDetails() {
     const agent = JSON.parse(agentData);
     const detailsContainer = document.getElementById("agent-details");
     detailsContainer.innerHTML = `
-          <h2>${agent.displayName}</h2>
+          <h2>${agent.displayName} - ${agent.role.displayName}</h2>
+          
           <hr>
           <p>${agent.description}</p>
           <div class="table-responsive">
@@ -23,7 +24,7 @@ function displayAgentDetails() {
       `;
     const foto = document.getElementById("agent-img");
     foto.innerHTML = `
-          <img src="${agent.displayIcon}" alt="${agent.role.displayName}" class="img-fluid">
+          <img src="${agent.displayIcon}" alt="${agent.displayName}" class="img-fluid">
       `;
 
     // Populate skills table
@@ -31,7 +32,7 @@ function displayAgentDetails() {
     agent.abilities.forEach((ability) => {
       const row = document.createElement("tr");
       row.innerHTML = `
-            <td class="text-white"><img src="${ability.displayIcon}" alt="${agent.role.displayName}" class="img-fluid" height="150" width="150"></td>
+            <td class="text-white"><img src="${ability.displayIcon}" alt="${ability.displayName}" class="img-fluid" height="150" width="150"></td>
             <td class="text-white">${ability.displayName}</td>
             <td class="text-white">${ability.description}</td>
         `;
