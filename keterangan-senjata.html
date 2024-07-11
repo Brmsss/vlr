@@ -15,14 +15,27 @@
       body {
         background-color: #2f3645;
       }
-      footer {
-        background-color: #1a2130;
-        color: white;
-        text-align: center;
-        padding: 1rem 0;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
+
+      @media screen and (min-device-width: 1025px) and (max-device-width: 1920px) {
+        footer {
+          background-color: #1a2130;
+          color: white;
+          text-align: center;
+          padding: 1rem 0;
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+        }
+      }
+      @media screen and (min-device-width: 100px) and (max-device-width: 767px) {
+        footer {
+          background-color: #1a2130;
+          color: white;
+          text-align: center;
+          padding: 1rem 0;
+          position: relative;
+          bottom: 0;
+        }
       }
     </style>
   </head>
