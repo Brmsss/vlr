@@ -1,13 +1,28 @@
+/* CSS untuk header */
 header {
   position: relative;
   background-color: black;
-  height: 75vh;
-  min-height: 25rem;
-  width: 100%;
-  overflow: hidden;
+  height: 75vh; /* Tinggi header 75% dari tinggi viewport */
+  min-height: 25rem; /* Tinggi minimum header 25 rem */
+  width: 100%; /* Lebar header 100% dari lebar viewport */
+  overflow: hidden; /* Konten yang melebihi ukuran header akan terpotong */
 }
 
+/* CSS untuk video latar belakang dalam header */
 header video {
+  position: absolute;
+  top: 50%; /* Posisi video di tengah vertikal header */
+  left: 50%; /* Posisi video di tengah horizontal header */
+  min-width: 100%; /* Video minimal lebar 100% */
+  min-height: 100%; /* Video minimal tinggi 100% */
+  width: auto;
+  height: auto;
+  z-index: 0; /* Mendefinisikan lapisan z-index untuk tata letak */
+  transform: translateX(-50%) translateY(-50%); /* Menyentuh titik tengah video */
+}
+
+/* CSS untuk latar belakang tambahan dalam header (jika ada) */
+header .bg {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -16,30 +31,16 @@ header video {
   width: auto;
   height: auto;
   z-index: 0;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 }
-header .bg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: 0;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-  }
+
+/* CSS untuk kontainer dalam header */
 header .container {
   position: relative;
-  z-index: 2;
+  z-index: 2; /* Menempatkan kontainer di atas elemen dengan z-index 0 */
 }
 
+/* CSS untuk overlay hitam dalam header */
 header .overlay {
   position: absolute;
   top: 0;
@@ -47,63 +48,69 @@ header .overlay {
   height: 100%;
   width: 100%;
   background-color: black;
-  opacity: 0.5;
-  z-index: 1;
+  opacity: 0.5; /* Opasitas overlay 50% */
+  z-index: 1; /* Menempatkan overlay di atas video dan latar belakang */
 }
+
+/* CSS untuk konten utama */
 main {
-  flex: 1;
+  flex: 1; /* Menggunakan fleksibilitas 1 untuk mengisi ruang tersedia */
 }
+
+/* CSS untuk footer */
 footer {
-  background-color: #1a2130;
-  color: white;
-  text-align: center;
-  padding: 1rem 0;
-  position: relative;
-  bottom: 0;
+  background-color: #1a2130; /* Warna latar belakang footer */
+  color: white; /* Warna teks footer */
+  text-align: center; /* Teks di tengah footer */
+  padding: 1rem 0; /* Padding atas dan bawah 1 rem, padding kiri dan kanan 0 */
+  position: relative; /* Posisi footer relatif */
+  bottom: 0; /* Footer di bagian bawah viewport */
 }
-/* Media Query for devices with coarse pointers and no hover functionality */
-/* General mobile styles */
+
+/* Media Query untuk perangkat dengan lebar maksimum 1440px */
 @media (max-width: 1440px) {
   header {
-    height: 50vh; /* Adjust height for mobile screens */
-    min-height: 20rem; /* Adjust minimum height for mobile screens */
+    height: 50vh; /* Tinggi header 50% dari tinggi viewport */
+    min-height: 20rem; /* Tinggi minimum header 20 rem */
   }
 
   header .overlay {
-    opacity: 0.7; /* Increase overlay opacity for better readability on mobile */
+    opacity: 0.7; /* Opasitas overlay ditingkatkan menjadi 70% */
   }
 
   header .container {
-    padding: 0.8rem; /* Add padding for content inside the container */
+    padding: 0.8rem; /* Padding kontainer ditambahkan */
   }
 
   p {
-    font-size: 1rem;
+    font-size: 1rem; /* Ukuran font paragraf disesuaikan */
   }
 
   .btn-danger, .btn-light {
-    font-size: 0.7rem; /* Adjust font size for better readability */
-    padding: 0.5rem 1rem; /* Adjust padding for better touch target */
-    border-radius: 5px; /* Adjust border radius for a more touch-friendly shape */
+    font-size: 0.7rem; /* Ukuran font tombol disesuaikan */
+    padding: 0.5rem 1rem; /* Padding tombol disesuaikan */
+    border-radius: 5px; /* Radius sudut tombol disesuaikan */
   }
+
   .raze {
-    display: none;
+    display: none; /* Elemen dengan kelas 'raze' disembunyikan */
   }
+
   .valorant {
-    height: 50%;
-    width: 50%;
+    height: 50%; /* Tinggi elemen dengan kelas 'valorant' 50% dari tinggi parent */
+    width: 50%; /* Lebar elemen dengan kelas 'valorant' 50% dari lebar parent */
   }
 }
 
-/* Ensure background video plays on mobile */
+/* Media Query untuk perangkat dengan pointer kasar dan tanpa fungsi hover */
 @media (pointer: coarse) and (hover: none) {
   header {
-    height: 50vh; /* Adjust height for mobile screens */
-    min-height: 20rem; /* Adjust minimum height for mobile screens */
-    background: none; /* Remove fallback image */
+    height: 50vh; /* Tinggi header 50% dari tinggi viewport */
+    min-height: 20rem; /* Tinggi minimum header 20 rem */
+    background: none; /* Menghapus gambar latar belakang alternatif */
   }
 
   header video {
-    display: block; /* Ensure video is displayed */
+    display: block; /* Pastikan video ditampilkan */
   }
 }
